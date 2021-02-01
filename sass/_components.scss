@@ -13,27 +13,29 @@
 }
 
 .divider {
+  &--intro,
+  &--features {
+    width: 15rem;
+    margin-bottom: 4rem;
+
+    @media only screen and (min-width: 1200px) {
+      margin-bottom: 6.2rem;
+    }
+  }
+
   &--intro {
     display: none;
 
     @media only screen and (min-width: 800px) {
       display: block;
       border: 0.5px solid #fff;
-      width: 15rem;
-      margin-bottom: 4rem;
-    }
-
-    @media only screen and (min-width: 1200px) {
-      margin-bottom: 6.2rem;
     }
   }
+
   &--features {
-    width: 15rem;
     border: 0.5px solid #9e96c6;
-    margin-bottom: 4rem;
 
     @media only screen and (min-width: 1200px) {
-      margin-bottom: 6rem;
       position: relative;
       z-index: 300;
     }
@@ -55,7 +57,7 @@
   max-width: 35rem;
 
   &__icon {
-    margin-bottom: 3rem;
+    margin-bottom: 2.8rem;
   }
 }
 
