@@ -1,0 +1,106 @@
+.heading {
+  font-family: "DM Serif Display", serif;
+
+  &--primary {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+
+    @media only screen and (min-width: 1200px) {
+      font-size: 67px;
+      line-height: 65px;
+      margin-bottom: 2.6rem;
+      position: relative;
+      z-index: 300;
+    }
+  }
+
+  &--secondary {
+    font-size: 3.7rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+
+    @media only screen and (min-width: 1200px) {
+      font-size: 55px;
+      line-height: 1;
+      margin-bottom: 0;
+      text-align: left;
+      width: 51%;
+      letter-spacing: -1px;
+    }
+  }
+
+  &--tertiary {
+    font-size: 2.6rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.description {
+  line-height: 1.6;
+
+  &--primary {
+    padding: 0 0.5rem;
+
+    @media only screen and (min-width: 1200px) {
+      letter-spacing: 0.05px;
+      padding: 0;
+    }
+  }
+
+  &--feature {
+    padding: 0 0.2rem;
+
+    @media only screen and (min-width: 1200px) {
+      padding: 0;
+    }
+  }
+}
+
+.bordered-link {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 10px 26px;
+  transition: all 0.5s;
+  font-size: 14px;
+  letter-spacing: 1px;
+
+  &--purple {
+    color: $color-neutral-dark;
+    border: 2px solid $color-neutral-dark;
+
+    &:hover,
+    &:focus {
+      background-color: $color-neutral-dark;
+      color: #fff;
+    }
+  }
+
+  &--white,
+  &--mobile {
+    color: #fff;
+    border: 2px solid #fff;
+
+    &:hover,
+    &:focus {
+      background-color: #fff;
+      color: $color-neutral-dark;
+    }
+  }
+
+  &--white {
+    margin: 3.2rem 0;
+  }
+
+  &--mobile {
+    padding: 1.5rem;
+    margin-top: 3.3rem;
+    transition: all 0.5s;
+    width: 100%;
+    max-width: 33rem;
+    font-size: 1.9rem;
+    letter-spacing: 0.2rem;
+    text-align: center;
+  }
+}

@@ -1,0 +1,42 @@
+$color-purple: hsl(256, 26%, 20%);
+$color-light-blue: hsl(216, 30%, 68%);
+$color-neutral-dark: hsl(270, 9%, 17%);
+$color-neutral: hsl(273, 4%, 51%);
+$color-neutral-light: hsl(0, 0%, 98%);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /* if default browser font is 16px, this sets it to 10px (1rem = 10px) */
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: $color-neutral-dark;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.disable-scroll {
+  overflow-y: hidden;
+}
