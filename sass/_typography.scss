@@ -59,29 +59,22 @@
 }
 
 .bordered-link {
-  display: inline-block;
   text-transform: uppercase;
   font-weight: 700;
-  padding: 10px 26px;
-  transition: all 0.5s;
-  font-size: 14px;
-  letter-spacing: 1px;
+  display: inline-block;
 
-  &--purple {
-    color: $color-neutral-dark;
-    border: 2px solid $color-neutral-dark;
-
-    &:hover,
-    &:focus {
-      background-color: $color-neutral-dark;
-      color: #fff;
-    }
-  }
-
-  &--white,
-  &--mobile {
+  &--white {
+    margin: 3.4rem 0;
     color: #fff;
-    border: 2px solid #fff;
+    border: 1.5px solid #fff;
+    padding: 1rem 2.6rem;
+    transition: all 0.5s;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+
+    @media only screen and (min-width: 1200px) {
+      margin: 3.3rem 0;
+    }
 
     &:hover,
     &:focus {
@@ -90,11 +83,7 @@
     }
   }
 
-  &--white {
-    margin: 3.2rem 0;
-  }
-
-  &--mobile {
+  &--nav {
     padding: 1.5rem;
     margin-top: 3.3rem;
     transition: all 0.5s;
@@ -103,9 +92,37 @@
     font-size: 1.9rem;
     letter-spacing: 0.2rem;
     text-align: center;
+    color: #fff;
+    border: 1.5px solid #fff;
+
+    &:hover,
+    &:focus {
+      background-color: #fff;
+      color: $color-neutral-dark;
+
+      @media only screen and (min-width: 700px) {
+        &:hover,
+        &:focus {
+          background-color: $color-neutral-dark;
+          color: #fff;
+        }
+      }
+    }
+
+    @media only screen and (min-width: 700px) {
+      color: $color-neutral-dark;
+      border: 1.5px solid $color-neutral-dark;
+      // display: inline-block;
+      padding: 1rem 2.6rem;
+      transition: all 0.5s;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+      margin-top: 0;
+    }
   }
 
   &--cta {
-    padding: 10px 20px;
+    padding: 1rem 2.2rem;
+    margin: 3.15rem 0;
   }
 }

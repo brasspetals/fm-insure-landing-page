@@ -18,7 +18,6 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    z-index: 100;
     position: relative;
     max-width: 122rem;
     padding: 2.4rem;
@@ -41,96 +40,196 @@
   }
 }
 
-// HEADER NAVIGATIONS
 .nav {
-  // Desktop
-  &-desktop {
+  background-color: $color-neutral-dark;
+  background-image: url("../images/bg-pattern-mobile-nav.svg");
+  background-position: bottom center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  color: #fff;
+  position: absolute;
+  top: 8rem;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 8rem);
+  min-height: 45.1rem;
+  transition: all 1s;
+  z-index: -1;
+  padding: 4.9rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media only screen and (min-width: 700px) {
+    z-index: unset;
+    padding: 0;
+    background-color: #fff;
+    background-image: none;
+    background-position: unset;
+    background-size: unset;
+    position: relative;
+    top: unset;
+    left: unset;
+    width: unset;
+    min-height: unset;
+    height: unset;
+    color: $color-neutral;
+    display: grid;
     grid-auto-flow: column;
-    display: none;
+    grid-gap: 32px;
+    transition: none;
+  }
+
+  &--hidden {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    top: -100vh;
+    transition: all 1s ease;
 
     @media only screen and (min-width: 700px) {
-      display: grid;
+      visibility: visible;
+      opacity: 1;
+      height: unset;
+      top: unset;
+      transition: unset;
     }
+  }
 
-    &__list {
-      display: grid;
+  &__list {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: row;
+    align-items: center;
+    grid-gap: 4.2rem;
+
+    @media only screen and (min-width: 700px) {
       grid-auto-flow: column;
       align-items: center;
-      margin-right: 32px;
+      // margin-right: 32px;
       grid-gap: 2.4rem;
     }
+  }
 
-    &__list-item {
+  &__list-item {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    width: 100%;
+    color: #fff;
+    transition: all 0.3s;
+
+    @media only screen and (min-width: 700px) {
       text-transform: uppercase;
       font-weight: 700;
       font-size: 1.4rem;
       letter-spacing: 1px;
       color: $color-neutral;
       transition: all 0.3s;
+    }
 
-      &:hover {
+    &:hover {
+      color: $color-light-blue;
+
+      @media only screen and (min-width: 700px) {
         color: $color-neutral-dark;
       }
     }
   }
-
-  // Mobile
-  &-mobile {
-    background-color: $color-neutral-dark;
-    background-image: url("../images/bg-pattern-mobile-nav.svg");
-    background-position: bottom center;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    color: #fff;
-    position: absolute;
-    top: 8rem;
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 8rem);
-    min-height: 45.1rem;
-    transition: all 1s;
-    z-index: 10;
-    padding: 4.9rem 2.4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @media only screen and (min-width: 700px) {
-      display: none;
-    }
-
-    &--hidden {
-      visibility: hidden;
-      opacity: 0;
-      height: 0;
-      top: -100vh;
-      transition: all 1s ease;
-    }
-
-    &__list {
-      width: 100%;
-      display: grid;
-      grid-auto-flow: row;
-      align-items: center;
-      grid-gap: 4.2rem;
-    }
-
-    &__list-item {
-      text-transform: uppercase;
-      text-align: center;
-      font-size: 1.9rem;
-      font-weight: 700;
-      letter-spacing: 0.2rem;
-      width: 100%;
-      color: #fff;
-      transition: all 0.3s;
-
-      &:hover {
-        color: $color-light-blue;
-      }
-    }
-  }
 }
+
+// HEADER NAVIGATIONS -- OLD DUAL SETUP
+// .nav {
+//   // Desktop
+//   &-desktop {
+//     grid-auto-flow: column;
+//     display: none;
+
+//     @media only screen and (min-width: 700px) {
+//       display: grid;
+//     }
+
+//     &__list {
+//       display: grid;
+//       grid-auto-flow: column;
+//       align-items: center;
+//       margin-right: 32px;
+//       grid-gap: 2.4rem;
+//     }
+
+//     &__list-item {
+//       text-transform: uppercase;
+//       font-weight: 700;
+//       font-size: 1.4rem;
+//       letter-spacing: 1px;
+//       color: $color-neutral;
+//       transition: all 0.3s;
+
+//       &:hover {
+//         color: $color-neutral-dark;
+//       }
+//     }
+//   }
+
+//   // Mobile
+//   &-mobile {
+//     background-color: $color-neutral-dark;
+//     background-image: url("../images/bg-pattern-mobile-nav.svg");
+//     background-position: bottom center;
+//     background-size: 100% auto;
+//     background-repeat: no-repeat;
+//     color: #fff;
+//     position: absolute;
+//     top: 8rem;
+//     left: 0;
+//     width: 100%;
+//     height: calc(100vh - 8rem);
+//     min-height: 45.1rem;
+//     transition: all 1s;
+//     z-index: 10;
+//     padding: 4.9rem 2.4rem;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+
+//     @media only screen and (min-width: 700px) {
+//       display: none;
+//     }
+
+//     &--hidden {
+//       visibility: hidden;
+//       opacity: 0;
+//       height: 0;
+//       top: -100vh;
+//       transition: all 1s ease;
+//     }
+
+//     &__list {
+//       width: 100%;
+//       display: grid;
+//       grid-auto-flow: row;
+//       align-items: center;
+//       grid-gap: 4.2rem;
+//     }
+
+//     &__list-item {
+//       text-transform: uppercase;
+//       text-align: center;
+//       font-size: 1.9rem;
+//       font-weight: 700;
+//       letter-spacing: 0.2rem;
+//       width: 100%;
+//       color: #fff;
+//       transition: all 0.3s;
+
+//       &:hover {
+//         color: $color-light-blue;
+//       }
+//     }
+//   }
+// }
 
 // INTRO SECTION
 .intro {
@@ -189,8 +288,9 @@
     @media only screen and (min-width: 1200px) {
       right: 0;
       top: unset;
-      width: 48.5%;
+      width: 48.75%;
     }
+
     & img {
       width: 100%;
       max-height: 45.1rem;
@@ -210,14 +310,14 @@
   }
 
   &__content {
-    padding: 8.8rem 2.4rem 6.1rem;
+    padding: 8.8rem 2.4rem 5.9rem;
     text-align: center;
     position: relative;
     display: flex;
     justify-content: center;
 
     @media only screen and (min-width: 800px) {
-      padding: 8.8rem 5.5rem 6.1rem;
+      padding: 8.8rem 5.5rem 5.9rem;
       text-align: left;
       justify-content: flex-start;
       width: 100%;
