@@ -4,12 +4,12 @@
 
   &--primary {
     font-size: 4.65rem;
-    line-height: 4.8rem;
+    line-height: 1.04;
     margin-bottom: 1.7rem;
 
     @media only screen and (min-width: 1200px) {
       font-size: 7rem;
-      line-height: 6.4rem;
+      line-height: 0.93;
       margin-bottom: 2.8rem;
       position: relative;
       z-index: 300;
@@ -17,13 +17,13 @@
   }
 
   &--secondary {
-    font-size: 3.9rem;
-    line-height: 4rem;
+    font-size: 4rem;
+    line-height: 1;
     margin-bottom: 0.8rem;
 
     @media only screen and (min-width: 1200px) {
       font-size: 5.4rem;
-      line-height: 5.6rem;
+      line-height: 1;
       margin-bottom: 0;
       text-align: left;
       width: 51%;
