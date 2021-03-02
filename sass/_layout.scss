@@ -41,43 +41,45 @@
 }
 
 .nav {
-  background-color: $color-neutral-dark;
-  background-image: url("../images/bg-pattern-mobile-nav.svg");
-  background-position: bottom center;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  color: #fff;
-  position: absolute;
-  top: 8rem;
-  left: 0;
-  width: 100%;
-  height: calc(100vh - 8rem);
-  min-height: 45.1rem;
-  transition: all 1s;
-  z-index: -1;
-  padding: 4.9rem 2.4rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  &-menu-wrapper {
+    background-color: $color-neutral-dark;
+    background-image: url("../images/bg-pattern-mobile-nav.svg");
+    background-position: bottom center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    color: #fff;
+    position: absolute;
+    top: 8rem;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 8rem);
+    min-height: 45.1rem;
+    transition: all 1s;
+    z-index: -1;
+    padding: 4.9rem 2.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  @media only screen and (min-width: 700px) {
-    z-index: unset;
-    padding: 0;
-    background-color: #fff;
-    background-image: none;
-    background-position: unset;
-    background-size: unset;
-    position: relative;
-    top: unset;
-    left: unset;
-    width: unset;
-    min-height: unset;
-    height: unset;
-    color: $color-neutral;
-    display: grid;
-    grid-auto-flow: column;
-    grid-gap: 32px;
-    transition: none;
+    @media only screen and (min-width: 700px) {
+      z-index: unset;
+      padding: 0;
+      background-color: #fff;
+      background-image: none;
+      background-position: unset;
+      background-size: unset;
+      position: relative;
+      top: unset;
+      left: unset;
+      width: unset;
+      min-height: unset;
+      height: unset;
+      color: $color-neutral;
+      display: grid;
+      grid-auto-flow: column;
+      grid-gap: 32px;
+      transition: none;
+    }
   }
 
   &--hidden {
